@@ -1,5 +1,4 @@
-// LLd Of Cab Booking System
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 // Entities
 class User{
@@ -17,308 +16,418 @@ class User{
    string getPassword(){
       return this->password;
    }
-   void setPassWord(string &newPassword){
-      this->password=newPassword;
+   void setPassword(string &newPassword){
+      this->password = newPassword;
    }
-
    void setId(int idCount){
-      this->id=idCount;
+      this->id = idCount;
    }
    string getEmail(){
       return this->email;
    }
    void setEmail(string &newEmail){
-      this->email=newEmail;
+      this->email = newEmail;
    }
-
    string getPhoneNumber(){
       return this->phoneNumber;
    }
    void setPhoneNumber(string &newPhoneNumber){
-      this->phoneNumber=newPhoneNumber;
+      this->phoneNumber = newPhoneNumber;
    }
-
-};
-class Vehicle {
-
-};
-class BikeRiders{
-private:
-    int id;
-    string bikeRiderName;
-    string mobileNumber;
-    bool isAvailable;
-    pair<int, int> riderLocation;
-    Vehicle vehicle;
-
-public:
-    int getId()  {
-        return this->id;
-    }
-    void setId(int id){
-        this->id=id;
-    }
-    string getBikeRiderName(){
-        return this->bikeRiderName;
-    }
-    void setBikeRiderName(string& bikeRiderName) {
-        this->bikeRiderName=bikeRiderName;
-    }
-    string getMobileNumber(){
-        return this->mobileNumber;
-    }
-    void setMobileNumber(string& mobileNumber) {
-        this->mobileNumber=mobileNumber;
-    }
-    bool getIsAvailable() {
-        return this->isAvailable;
-    }
-    void setIsAvailable(bool isAvailable) {
-        this->isAvailable=isAvailable;
-    }
-    pair<int, int> getRiderLocation() {
-        return this->riderLocation;
-    }
-    void setRiderLocation(pair<int,int>&riderLocation){
-        this->riderLocation=riderLocation;
-    }
-    void setRiderLocation(int x,int y){
-        this->riderLocation=make_pair(x,y);
-    }
 };
 
-class ThreeWheelerRiders {
-private:
-    int id;
-    string ThreeWheelerRiders;
-    string ThreewheelerRidermobileNumber;
-    bool IsAvailable;
-    pair<int, int> ThreewheelerRiderLoction;
-
-public:
-   string getName(){
-      return this->ThreeWheelerRiders;
-    }
-    int getId(){
-      return this->id;
-    }
-    bool getIsAvailable(){
-      return this->IsAvailable;
-    }
-    void setIsAvailable(bool isAvailable){
-       this->IsAvailable=isAvailable;
-    }
-    pair<int,int>getThreewheelerRiderLoction() {
-        return this->ThreewheelerRiderLoction;
-    }
-    void setThreewheelerRiderLoction(pair<int,int>&location) {
-        this->ThreewheelerRiderLoction=location;
-    }
-    void setThreewheelerRiderLoction(int x, int y) {
-        this->ThreewheelerRiderLoction = make_pair(x, y);
-    }
-};
-class CabRiders{
-      long id;
-      string cabRiderName;
-      string CabMobileNumber;
-      bool IsAvailable;
-      pair<int,int>CabRiderLoction;
+class BikeDriver{
+   private:
+   int id;
+   string bikeDriverName;
+   string mobileNumber;
+   bool isAvailable;
+   pair<int,int>driverLocation;
+   string vehicle;
+   bool accept;
    public:
-    bool getIsAvailable(){
-      return this->IsAvailable;
-    }
-    string getName(){
-      return this->cabRiderName;
-    }
-    int getId(){
+   string getVehicle(){
+      return this->vehicle;
+   }
+   int getId(){
       return this->id;
-    }
-    void setIsAvailable(bool isAvailable){
-       this->IsAvailable=isAvailable;
-    }
-    pair<int,int>getCabRiderLoctaion() {
-        return this->CabRiderLoction;
-    }
-    void setCabRiderLocation(pair<int,int>&location) {
-        this->CabRiderLoction=location;
-    }
-    void setCabRiderLocation(int x, int y) {
-        this->CabRiderLoction = make_pair(x, y);
-    }
+   }
+   int getAccept(){
+      return this->accept;
+   }
+   void setId(int id){
+      this->id = id;
+   }
+   string getBikeDriverName(){
+      return this->bikeDriverName;
+   }
+   void setBikeDriverName(string &bikeDriverName){
+      this->bikeDriverName = bikeDriverName;
+   }
+   string getMobileNumber(){
+      return this->mobileNumber;
+   }
+   void setMobileNumber(string &mobileNumber){
+      this->mobileNumber = mobileNumber;
+   }
+   bool getIsAvailable(){
+      return this->isAvailable;
+   }
+   void setIsAvailable(bool isAvailable){
+      this->isAvailable = isAvailable;
+   }
+   pair<int,int>getDriverLocation(){
+      return this->driverLocation;
+   }
+   void setDriverLocation(pair<int,int> &driverLocation){
+      this->driverLocation = driverLocation;
+   }
+   void setDriverLocation(int x,int y){
+      this->driverLocation = make_pair(x,y);
+   }
 };
-/// MAIN CLASS ////
+
+class ThreeWheelerDriver{
+   private:
+   int id;
+   string threeWheelerDriverName;
+   string mobileNumber;
+   bool isAvailable;
+   pair<int,int>driverLocation;
+   bool accept;
+   public:
+   string vehicle;
+   string getVehicle(){
+      return this->vehicle;
+   }
+   string getName(){
+      return this->threeWheelerDriverName;
+   }
+   int getId(){
+      return this->id;
+   }
+   int getAccept(){
+      return this->accept;
+   }
+   bool getIsAvailable(){
+      return this->isAvailable;
+   }
+   void setIsAvailable(bool isAvailable){
+      this->isAvailable = isAvailable;
+   }
+   pair<int,int>getDriverLocation(){
+      return this->driverLocation;
+   }
+   void setDriverLocation(pair<int,int> &location){
+      this->driverLocation = location;
+   }
+   void setDriverLocation(int x,int y){
+      this->driverLocation = make_pair(x,y);
+   }
+};
+
+class CabDriver{
+   private:
+   long id;
+   string cabDriverName;
+   string mobileNumber;
+   bool isAvailable;
+   pair<int,int>driverLocation;
+   bool accept;
+   public:
+   string vehicle;
+   string getVehicle(){
+      return this->vehicle;
+   }
+   int getAccept(){
+      return this->accept;
+   }
+   bool getIsAvailable(){
+      return this->isAvailable;
+   }
+   string getName(){
+      return this->cabDriverName;
+   }
+   int getId(){
+      return this->id;
+   }
+   void setIsAvailable(bool isAvailable){
+      this->isAvailable = isAvailable;
+   }
+   pair<int,int>getDriverLocation(){
+      return this->driverLocation;
+   }
+   void setDriverLocation(pair<int,int> &location){
+      this->driverLocation = location;
+   }
+   void setDriverLocation(int x,int y){
+      this->driverLocation = make_pair(x,y);
+   }
+};
+
+// MAIN CLASS
 class CabBookingSystem{
    public:
    map<string,User>userDB;
-   vector<ThreeWheelerRiders>threeWheelerRider;
-   vector<CabRiders>cabRider;
-   vector<BikeRiders>bikeRider;
-   int failed=0;
-   int idCounter=0;
+   vector<ThreeWheelerDriver>threeWheelerDrivers;
+   vector<CabDriver>cabDrivers;
+   vector<BikeDriver>bikeDrivers;
+   int failed = 0;
+   int idCounter = 0;
+
    void checkCredential(User user){
-      if(userDB.find(user.getPhoneNumber())!=userDB.end()){
-         cout<<"User Alread Exist!"<<'\n';
+      if(userDB.find(user.getPhoneNumber()) != userDB.end()){
+         cout<<"User Already Exists!"<<'\n';
          loginPage(user);
-         return ;
+         return;
       }
       signUp(user);
    }
+
    void loginPage(User user){
-      string DbPassword=userDB[user.getPhoneNumber()].getPassword();
-      if(user.getPassword()==DbPassword){
+      string DbPassword = userDB[user.getPhoneNumber()].getPassword();
+      if(user.getPassword() == DbPassword){
          cout<<"Login Success"<<'\n';
          UserInterface(user);
          return;
       }
-      cout<<"Write the correct Password !!"<<'\n';
+      cout<<"Write the correct Password!!"<<'\n';
       failed++;
-      if(failed<=5){
+      if(failed <= 5){
          string retryPassword;
          cout<<"Write Password Again"<<'\n';
          cin>>retryPassword;
-         user.setPassWord(retryPassword);
+         user.setPassword(retryPassword);
          loginPage(user);
-      }else{
-         cout<<"Your Have Tried Many Times Kindly Try again later";
+      } else {
+         cout<<"You Have Tried Many Times. Try again later"<<endl;
       }
    }
+
    void signUp(User user){
       user.setId(idCounter++);
-      userDB[user.getPhoneNumber()]=user;
-      cout<<"signUp successfull"<<endl;
+      userDB[user.getPhoneNumber()] = user;
+      cout<<"SignUp successful"<<endl;
       UserInterface(user);
    }
-   int manhattenDistance(pair<int,int>userLoctation,pair<int,int>riderLocation){
-      return abs(userLoctation.first-riderLocation.first)+abs(userLoctation.second-riderLocation.second);
+
+   int manhattanDistance(pair<int,int>userLocation,pair<int,int>driverLocation){
+      return abs(userLocation.first - driverLocation.first)
+           + abs(userLocation.second - driverLocation.second);
    }
+
    void threeWheelerShow(User user){
-      sort(threeWheelerRider.begin(),threeWheelerRider.end(),[&](ThreeWheelerRiders a,ThreeWheelerRiders b){
-         pair<int,int>location1=a.getThreewheelerRiderLoction();
-         pair<int,int>location2=b.getThreewheelerRiderLoction();
-         int distance1=manhattenDistance(user.getUserLocation(),location1);
-         int distance2=manhattenDistance(user.getUserLocation(),location2);
-         return distance1<distance2;
-      });
-      for(int i=0;i<11;i++){
-         if(threeWheelerRider[i].getIsAvailable()){
-         cout<<"ThreeWheeler Rider is Available"<<endl;
-         cout<<threeWheelerRider[i].getThreewheelerRiderLoction().first<<' '<<threeWheelerRider[i].getThreewheelerRiderLoction().second;
+      sort(threeWheelerDrivers.begin(),threeWheelerDrivers.end(),
+           [&](ThreeWheelerDriver a, ThreeWheelerDriver b){
+              return manhattanDistance(user.getUserLocation(), a.getDriverLocation())
+                   < manhattanDistance(user.getUserLocation(), b.getDriverLocation());
+           });
+      for(int i = 0; i < 11 && i < (int)threeWheelerDrivers.size(); i++){
+         if(threeWheelerDrivers[i].getIsAvailable()){
+            cout<<"ThreeWheeler Driver is Available at "
+                << threeWheelerDrivers[i].getDriverLocation().first << ' '
+                << threeWheelerDrivers[i].getDriverLocation().second
+                << endl;
          }
       }
    }
-   void bikeRiderShow(User user){
-      // same as threewheeler
-       sort(bikeRider.begin(),bikeRider.end(),[&](BikeRiders a,BikeRiders b){
-         pair<int,int>location1=a.getRiderLocation();
-         pair<int,int>location2=b.getRiderLocation();
-         int distance1=manhattenDistance(user.getUserLocation(),location1);
-         int distance2=manhattenDistance(user.getUserLocation(),location2);
-         return distance1<distance2;
-      });
-      for(int i=0;i<11;i++){
-         if(bikeRider[i].getIsAvailable()){
-         cout<<"ThreeWheeler Rider is Available"<<endl;
-         cout<<bikeRider[i].getRiderLocation().first<<' '<<bikeRider[i].getRiderLocation().second;
+
+   void bikeShow(User user){
+      sort(bikeDrivers.begin(),bikeDrivers.end(),
+           [&](BikeDriver a, BikeDriver b){
+              return manhattanDistance(user.getUserLocation(), a.getDriverLocation())
+                   < manhattanDistance(user.getUserLocation(), b.getDriverLocation());
+           });
+      for(int i = 0; i < 11 && i < (int)bikeDrivers.size(); i++){
+         if(bikeDrivers[i].getIsAvailable()){
+            cout<<"Bike Driver is Available at "
+                << bikeDrivers[i].getDriverLocation().first << ' '
+                << bikeDrivers[i].getDriverLocation().second
+                << endl;
          }
       }
    }
+
    void cabShow(User user){
-      // same as Bike rider
-      // same as threewheeler
-       sort(cabRider.begin(),cabRider.end(),[&](CabRiders a,CabRiders b){
-         pair<int,int>location1=a.getCabRiderLoctaion();
-         pair<int,int>location2=b.getCabRiderLoctaion();
-         int distance1=manhattenDistance(user.getUserLocation(),location1);
-         int distance2=manhattenDistance(user.getUserLocation(),location2);
-         return distance1<distance2;
-      });
-      for(int i=0;i<11;i++){
-         if(cabRider[i].getIsAvailable()){
-         cout<<"ThreeWheeler Rider is Available"<<endl;
-         cout<<cabRider[i].getCabRiderLoctaion().first<<' '<<cabRider[i].getCabRiderLoctaion().second;
+      sort(cabDrivers.begin(),cabDrivers.end(),
+           [&](CabDriver a, CabDriver b){
+              return manhattanDistance(user.getUserLocation(), a.getDriverLocation())
+                   < manhattanDistance(user.getUserLocation(), b.getDriverLocation());
+           });
+      for(int i = 0; i < 11 && i < (int)cabDrivers.size(); i++){
+         if(cabDrivers[i].getIsAvailable()){
+            cout<<"Cab Driver is Available at "
+                << cabDrivers[i].getDriverLocation().first << ' '
+                << cabDrivers[i].getDriverLocation().second
+                << endl;
          }
       }
    }
+
    void displayCost(User user,pair<int,int>dropCoordinates){
-      pair<int,int>usercurrLoction;
-      int distance=manhattenDistance(usercurrLoction,dropCoordinates);
-      int cost=distance*10;// cost per km is 10rs
-      cout<<"Ride Fare:"<<cost<<endl;
+      int distance = manhattanDistance(user.getUserLocation(), dropCoordinates);
+      int cost = distance * 10; // cost per km is 10rs
+      cout<<"Ride Fare: "<<cost<<endl;
    }
-   void showBookedDetailsCab(User user,CabRiders cabRider,pair<int,int>dropCoordinates){
-      cabRider.setIsAvailable(false);
-      cout<<"Ride Booked Successfully"<<'\n';
-      cout<<"RiderId"<<cabRider.getId()<<endl;
-      cout<<"Riders Name"<<cabRider.getName()<<endl;
-      cout<<"Pick Up Location"<<user.getUserLocation().first<<' '<<user.getUserLocation().second<<endl;
-      cout<<"Drop Location"<<dropCoordinates.first<<' '<<dropCoordinates.second<<endl;
 
-   }
-      void showBookedDetailsAuto(User user,ThreeWheelerRiders Autoo,pair<int,int>dropCoordinates){
-      Autoo.setIsAvailable(false);
+   void showBookedDetailsCab(User user, CabDriver driver, pair<int,int>dropCoordinates){
+      driver.setIsAvailable(false);
       cout<<"Ride Booked Successfully"<<'\n';
-      cout<<"RiderId"<<Autoo.getId()<<endl;
-      cout<<"Riders Name"<<Autoo.getName()<<endl;
-      cout<<"Pick Up Location"<<user.getUserLocation().first<<' '<<user.getUserLocation().second<<endl;
-      cout<<"Drop Location"<<dropCoordinates.first<<' '<<dropCoordinates.second<<endl;
-
+      cout<<"DriverId: "<<driver.getId()<<endl;
+      cout<<"Driver Name: "<<driver.getName()<<endl;
+      cout<<"Vehicle Number: "<<driver.getVehicle()<<endl;
+      cout<<"Pick Up Location: "
+          << user.getUserLocation().first << ' '
+          << user.getUserLocation().second << endl;
+      cout<<"Drop Location: "
+          << dropCoordinates.first << ' '
+          << dropCoordinates.second << endl;
    }
-      void showBookedDetailsBike(User user,BikeRiders bikeRidee,pair<int,int>dropCoordinates){
-      bikeRidee.setIsAvailable(false);
+
+   void showBookedDetailsAuto(User user, ThreeWheelerDriver driver, pair<int,int>dropCoordinates){
+      driver.setIsAvailable(false);
       cout<<"Ride Booked Successfully"<<'\n';
-      cout<<"RiderId"<<bikeRidee.getId()<<endl;
-      cout<<"Riders Name"<<bikeRidee.getBikeRiderName()<<endl;
-      cout<<"Pick Up Location"<<user.getUserLocation().first<<' '<<user.getUserLocation().second<<endl;
-      cout<<"Drop Location"<<dropCoordinates.first<<' '<<dropCoordinates.second<<endl;
-
+      cout<<"DriverId: "<<driver.getId()<<endl;
+      cout<<"Driver Name: "<<driver.getName()<<endl;
+      cout<<"Vehicle Number: "<<driver.getVehicle()<<endl;
+      cout<<"Pick Up Location: "
+          << user.getUserLocation().first << ' '
+          << user.getUserLocation().second << endl;
+      cout<<"Drop Location: "
+          << dropCoordinates.first << ' '
+          << dropCoordinates.second << endl;
    }
+
+   void showBookedDetailsBike(User user, BikeDriver driver, pair<int,int>dropCoordinates){
+      driver.setIsAvailable(false);
+      cout<<"Ride Booked Successfully"<<'\n';
+      cout<<"DriverId: "<<driver.getId()<<endl;
+      cout<<"Driver Name: "<<driver.getBikeDriverName()<<endl;
+      cout<<"Vehicle Number: "<<driver.getVehicle()<<endl;
+      cout<<"Pick Up Location: "
+          << user.getUserLocation().first << ' '
+          << user.getUserLocation().second << endl;
+      cout<<"Drop Location: "
+          << dropCoordinates.first << ' '
+          << dropCoordinates.second << endl;
+   }
+
+   bool requestCabDriver(CabDriver driver,pair<int,int>dropCoordinates){
+      cout<<"You have a ride request"<<'\n';
+      cout<<"Drop coordinates: "
+          << dropCoordinates.first << ' '
+          << dropCoordinates.second << endl;
+      return driver.getAccept();
+   }
+   bool requestBikeDriver(BikeDriver driver,pair<int,int>dropCoordinates){
+      cout<<"You have a ride request"<<'\n';
+      cout<<"Drop coordinates: "
+          << dropCoordinates.first << ' '
+          << dropCoordinates.second << endl;
+      return driver.getAccept();
+   }
+   bool requestAutoDriver(ThreeWheelerDriver driver,pair<int,int>dropCoordinates){
+      cout<<"You have a ride request"<<'\n';
+      cout<<"Drop coordinates: "
+          << dropCoordinates.first << ' '
+          << dropCoordinates.second << endl;
+      return driver.getAccept();
+   }
+
    void BookRideforCustomer(User user,bool isThreeW,bool isBike,bool isCab){
       cout<<"Give Drop Coordinates"<<'\n';
       pair<int,int>dropCoordinates;
-      cin>>dropCoordinates.first>>dropCoordinates.second;;
-      displayCost(user,dropCoordinates);
+      cin>>dropCoordinates.first>>dropCoordinates.second;
+      displayCost(user, dropCoordinates);
       bool bookRide;
       cin>>bookRide;
       if(bookRide){
          if(isCab){
-            for(int i=0;i<20;i++){// request send to Cabrider is still not done
-               if(cabRider[i].getIsAvailable()){
-                  showBookedDetailsCab(user,cabRider[i],dropCoordinates);
+            for(int i = 0; i < (int)cabDrivers.size(); i++){
+               if(cabDrivers[i].getIsAvailable() && requestCabDriver(cabDrivers[i], dropCoordinates)){
+                  showBookedDetailsCab(user, cabDrivers[i], dropCoordinates);
                   break;
                }
             }
-         }else if(isBike){
-            for(int i=0;i<20;i++){// request send to Bikerider is still not done
-               if(bikeRider[i].getIsAvailable()){
-                  showBookedDetailsBike(user,bikeRider[i],dropCoordinates);
+         } else if(isBike){
+            for(int i = 0; i < (int)bikeDrivers.size(); i++){
+               if(bikeDrivers[i].getIsAvailable() && requestBikeDriver(bikeDrivers[i], dropCoordinates)){
+                  showBookedDetailsBike(user, bikeDrivers[i], dropCoordinates);
                   break;
                }
             }
-         }else{
-            for(int i=0;i<20;i++){// request send to Autorider is still not done
-               if(threeWheelerRider[i].getIsAvailable()){
-                  showBookedDetailsAuto(user,threeWheelerRider[i],dropCoordinates);
+         } else {
+            for(int i = 0; i < (int)threeWheelerDrivers.size(); i++){
+               if(threeWheelerDrivers[i].getIsAvailable() && requestAutoDriver(threeWheelerDrivers[i], dropCoordinates)){
+                  showBookedDetailsAuto(user, threeWheelerDrivers[i], dropCoordinates);
                   break;
                }
             }
          }
       }
    }
+
    void UserInterface(User user){
-      pair<int,int>userCurrentLoction=user.getUserLocation();
       cout<<"Select One Vehicle Type"<<'\n';
       bool ThreeW,BikeR,Cab;
       cin>>ThreeW>>BikeR>>Cab;
       if(ThreeW){
          threeWheelerShow(user);
          BookRideforCustomer(user,true,false,false);
-      }else if(BikeR){
-          bikeRiderShow(user);
-          BookRideforCustomer(user,false,true,false);
-      }else{
+      } else if(BikeR){
+         bikeShow(user);
+         BookRideforCustomer(user,false,true,false);
+      } else {
          cabShow(user);
          BookRideforCustomer(user,false,false,true);
       }
    }
 };
+
+int main(){
+   CabBookingSystem system;
+
+   // seed some bike drivers
+   BikeDriver b1;
+   b1.setId(1);
+   b1.setBikeDriverName(*(new string("BikeDriver A")));
+   b1.setVehicle(*(new string("BIKE-123")));
+   b1.setDriverLocation(5,5);
+   b1.setIsAvailable(true);
+   b1.setAccept(true);
+   system.bikeDrivers.push_back(b1);
+
+   // seed some three-wheeler drivers
+   ThreeWheelerDriver t1;
+   t1.setId(1);
+   t1.setThreeWheelerDriverName(*(new string("AutoDriver A")));
+   t1.setVehicle(*(new string("AUTO-456")));
+   t1.setDriverLocation(3,4);
+   t1.setIsAvailable(true);
+   t1.setAccept(true);
+   system.threeWheelerDrivers.push_back(t1);
+
+   // seed some cab drivers
+   CabDriver c1;
+   c1.setId(1);
+   c1.setCabDriverName(*(new string("CabDriver A")));
+   c1.setVehicle(*(new string("CAB-789")));
+   c1.setDriverLocation(1,2);
+   c1.setIsAvailable(true);
+   c1.setAccept(true);
+   system.cabDrivers.push_back(c1);
+
+   // user sign-up / login flow
+   User user;
+   string phone, password;
+   cout<<"Enter phone number"<<'\n';
+   cin>>phone;
+   user.setPhoneNumber(phone);
+   cout<<"Enter password"<<'\n';
+   cin>>password;
+   user.setPassword(password);
+
+   system.checkCredential(user);
+
+   return 0;
+}
