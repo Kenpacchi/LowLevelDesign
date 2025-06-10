@@ -24,12 +24,12 @@
     &quot;assignee&quot;: &quot;Kenpacchi&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:Kenpacchi/LowLevelDesign.git&quot;,
-    &quot;accountId&quot;: &quot;07427109-756d-4ef1-b576-b6f9f4c0e005&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kenpacchi/LowLevelDesign.git",
+    "accountId": "07427109-756d-4ef1-b576-b6f9f4c0e005"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -42,10 +42,23 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "cabBookingSystem",
+    "RunOnceActivity.git.unshallow": "true",
     "last_opened_file_path": "C:/Users/91797/Desktop/LLD"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="LLD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="LLD" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1b10a881-9dc9-4d15-9889-692a6f38bd4d" name="Changes" comment="" />

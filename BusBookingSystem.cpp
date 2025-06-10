@@ -114,7 +114,7 @@ class BusTicketBookingSystem{
          long costB=B.getbusFareCost();
          return costA<costB;
       });
-      bool seats=0;
+      bool seats=0;// seats
       for(Bus BusI:busestoDestination){
          cout<<"Bus Name:"<<BusI.getBusName()<<endl;
          cout<<"Bus From:"<<userBoardingLoaction<<endl;
